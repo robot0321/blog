@@ -5,12 +5,20 @@ import * as Component from "./quartz/components"
 export const sharedPageComponents: SharedLayout = {
   head: Component.Head(),
   header: [],
-  afterBody: [],
+  afterBody: [
+    Component.ConditionalRender({
+      component: Component.RecentNotes({
+        title: "Recent Posts",
+        limit: 5,
+      }),
+      condition: (page) => page.fileData.slug === "index",
+    }),
+  ],
   footer: Component.Footer({
-    links: {
-      GitHub: "https://github.com/jackyzha0/quartz",
-      "Discord Community": "https://discord.gg/cRFFHYye7t",
-    },
+    links: {}
+    //   GitHub: "https://github.com/jackyzha0/quartz",
+    //   "Discord Community": "https://discord.gg/cRFFHYye7t",
+    // },
   }),
 }
 
@@ -42,6 +50,9 @@ export const defaultContentPageLayout: PageLayout = {
   ],
   right: [
     Component.Graph(),
+    // Component.RecentNotes({
+    //   limit: 5,
+    // }),
     Component.DesktopOnly(Component.TableOfContents()),
     Component.Backlinks(),
   ],
