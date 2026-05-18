@@ -5,11 +5,10 @@ tags:
   - Transformer
 
 ---
-
-[# An Image is Worth 16x16 Words: Transformers for Image Recognition at Scale](https://arxiv.org/abs/2010.11929) (2020)
-근본적으론 Encoder임. 공용 Decoder Multi-modal에도 유리
-Scalability 효과를 받으려고 CNN 구조에서 Transformer로 전환 시도.
-CNN의 inductive bias (translation equivariance, locality, etc.)가 없어서 데이터 많아야 효과적.
+[An Image is Worth 16x16 Words: Transformers for Image Recognition at Scale](https://arxiv.org/abs/2010.11929) (2020)
+* 근본적으론 Encoder임. 
+* Scalability 효과를 받으려고 CNN 구조에서 Transformer로 전환 시도. 
+* CNN의 inductive bias (translation equivariance, locality, etc.)가 없어서 데이터 많아야 효과적.
 
 ## Architecture
 * Image 버전의 Transformer: patch (16x16)-wise Token으로 나누기

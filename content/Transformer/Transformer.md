@@ -6,7 +6,7 @@ tags:
   - Attention
 ---
 [Attention is all you need](https://arxiv.org/abs/1706.03762) (2017)
-language translation을 목표로 구조를 설계해서, 이를 기반으로 이해하면 편하다.
+* language translation을 목표로 구조를 설계해서, 이를 기반으로 이해하면 편하다.
 * e.g.) input (영어)를 condition으로 output (프랑스어)를 auto-regressive하게 출력 (condition + 이전 output -> output+1)
 
 ## Attention
