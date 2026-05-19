@@ -24,6 +24,9 @@ $$ Attention(Q,K,V) = softmax\left(\frac{QK^T}{\sqrt{d_k}}\right)V $$
 * Query와 Key, Value는 보통 다르다: `Cross-Attention`
 	* 근데 Q, K, V를 모두 똑같이 두면 자기 자신에 대한 중요도 재 조정: `Self-Attention`
 
+* 이후 발전
+	* [[FlashAttention]]: IO (input-output) 최적화를 통한 속도/메모리 성능 향상
+	* [[KV cache]]: Key-Value를 저장해둬서 속도 및 메모리 향상
 ## Tokenizer & Embedding
 * Tokenizer: 입력을 Token단위로 나누고 Index로 변환 (고정된 Algorithm + Lookup Table)
 	* Text: BERT (확률 기반), ByT5 (byte단위, tokenizer-free)
