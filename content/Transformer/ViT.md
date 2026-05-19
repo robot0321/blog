@@ -1,6 +1,7 @@
 ---
 title: Vision Transformer (ViT)
-date: 2026-05-18
+created: 2026-05-18
+modified: 2026-05-19
 tags:
   - Transformer
   - FeatureExtractor
@@ -21,6 +22,7 @@ tags:
 * `[cls]` token 자리를 만들어서 sub-task (ViT는 classification)에 맞는 정보 그릇으로 사용
 	* `[cls]` token 자리의 output vector만을 MLP head (classification)에 집어 넣어서 학습하기 때문에, attention을 하면서 `[cls]` 벡터는 '전체의 응축된 특징' (for sub-task)를 갖음.
 	* 다른 sub-task: [[DINO]] (segmentation), [[MAE]] (reconstruction)
+	* 다른 계열: [[CroCo]] (cross-view completion) -> ([cls] 토큰을 안 씀)
 
 ### Positional Embedding
 * Standard "learnable" 1D position embeddings
